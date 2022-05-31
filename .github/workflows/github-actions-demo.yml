@@ -24,6 +24,7 @@ jobs:
       - name: checkout other repo
         uses: actions/checkout@v3
         with:
+          token: ${{ secrets.GH_PAT }} 
           repository: 'Nakachi-S/client_ver1'
           path: client_ver1
 
