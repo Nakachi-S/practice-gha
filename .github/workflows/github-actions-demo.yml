@@ -15,3 +15,15 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+
+      - name: checkout this repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+        run: ls
+
+      - name: checkout other repo
+        with:
+          repository: 'Nakachi-S/client_ver1'
+          path: client_ver1
+        run: ls
