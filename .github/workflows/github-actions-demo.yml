@@ -22,6 +22,7 @@ jobs:
           fetch-depth: 0
 
       - name: checkout other repo
+        uses: actions/checkout@v3
         with:
           repository: 'Nakachi-S/client_ver1'
           path: client_ver1
